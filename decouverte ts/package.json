@@ -1,0 +1,18 @@
+{
+  "name": "decouverte-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "start": "",
+    "prebuild": "echo \"je suis dans le prebuild\"",
+    "dev": "npm run tsc -- --watch",
+    "build": "npm run tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}
