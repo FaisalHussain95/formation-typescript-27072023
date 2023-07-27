@@ -1,4 +1,8 @@
+import { BreakableItem } from "./BreakableItem";
+import { Person } from "./Person";
+import { Weapon } from "./Weapon";
+
 export interface IHealth {
   health: number;
-  sustainDamage(damage: number): void;
+  sustainDamage(weapon: Weapon): void;
 }

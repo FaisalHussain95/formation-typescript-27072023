@@ -1,5 +1,7 @@
 import { Item } from "./Item";
 import { IHealth } from "./IHealth";
+import { HandleDamage } from "../utils/HandleDamage";
+import { Weapon } from "./Weapon";
 
 export class BreakableItem extends Item implements IHealth {
   constructor(
@@ -15,7 +17,7 @@ export class BreakableItem extends Item implements IHealth {
     super(_id, name, description, wearable, weight, value);
   }
 
-  sustainDamage(damage: number): void {
-    this.health -= damage;
+  sustainDamage(weapon: Weapon): void {
+    HandleDamage.sustainAttack(this, weapon);
   }
 }
