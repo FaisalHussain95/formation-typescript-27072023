@@ -1,8 +1,12 @@
+import { GenericId } from "./GenericId";
 import { Item } from "./Item";
 
+/**
+ * Classe qui permet de créer une arme
+ */
 export class Weapon extends Item {
   constructor(
-    _id: number,
+    id: GenericId,
     name: string,
     description: string,
     wearable: boolean,
@@ -11,6 +15,6 @@ export class Weapon extends Item {
     public damage: number,
     public range: number
   ) {
-    super(_id, name, description, wearable, weight, value);
+    super(id, name, description, wearable, weight, value);
   }
 }

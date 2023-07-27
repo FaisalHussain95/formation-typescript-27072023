@@ -1,14 +1,15 @@
 import { GenericId } from "./GenericId";
 
-export class Item extends GenericId {
+/**
+ * Classe abstraite qui permet de créer un objet
+ */
+export abstract class Item {
   constructor(
-    _id: number,
+    id: GenericId,
     public name: string,
     public description: string,
     public wearable: boolean,
     public weight: number,
     public value: number
-  ) {
-    super(_id);
-  }
+  ) {}
 }

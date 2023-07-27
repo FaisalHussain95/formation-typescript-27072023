@@ -1,14 +1,13 @@
-import { BreakableItem } from "../models/BreakableItem";
-import { Person } from "../models/Person";
 import { Weapon } from "../models/Weapon";
+import Life from "../models/Life";
 
 export class HandleDamage {
-  static sustainAttack(target: Person | BreakableItem, weapon: Weapon) {
-    target.health -= weapon.damage;
+  static sustainAttack(life: Life, weapon: Weapon) {
+    life.value -= weapon.damage;
 
     // health to zero if negative
-    if (target.health <= 0) {
-      target.health = 0;
+    if (life.value <= 0) {
+      life.value = 0;
     }
   }
 }

@@ -1,23 +1,21 @@
 import { Item } from "./Item";
-import { IHealth } from "./IHealth";
-import { HandleDamage } from "../utils/HandleDamage";
-import { Weapon } from "./Weapon";
+import Life from "./Life";
+import { GenericId } from "./GenericId";
 
-export class BreakableItem extends Item implements IHealth {
+/**
+ * BreakableItem class
+ * @name BreakableItem
+ */
+export class BreakableItem extends Item {
   constructor(
-    _id: number,
+    id: GenericId,
     name: string,
     description: string,
     wearable: boolean,
     weight: number,
     value: number,
-    public health: number,
-    public durability: number
+    public life: Life
   ) {
-    super(_id, name, description, wearable, weight, value);
-  }
-
-  sustainDamage(weapon: Weapon): void {
-    HandleDamage.sustainAttack(this, weapon);
+    super(id, name, description, wearable, weight, value);
   }
 }
