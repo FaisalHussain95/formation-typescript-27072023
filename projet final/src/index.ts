@@ -17,16 +17,16 @@ Etape 04
   Dans le main.ts, créer un wookiee et un stormtrooper, et fight !
 */
 
-import { Wookiee } from "./models/persons/Wookiee";
-import { StormTrooper } from "./models/persons/StormTrooper";
+import Wookiee from "./models/persons/Wookiee";
+import StormTrooper from "./models/persons/StormTrooper";
 import Blaster from "./models/weapons/Blaster";
-import { GenericId } from "./models/GenericId";
+import GenericId from "./models/GenericId";
 
-const blaster1 = new Blaster(new GenericId(10));
-const wookiee = new Wookiee(new GenericId(11), "Chewbacca");
+const blaster1 = new Blaster(10);
+const wookiee = new Wookiee(11, "Chewbacca");
 wookiee.equip(blaster1);
 
-const stormTrooper = new StormTrooper(new GenericId(12), "StormTrooper");
+const stormTrooper = new StormTrooper(12, "StormTrooper");
 
 for (let i = 0; i < 10; i++) {
   wookiee.attack(stormTrooper);

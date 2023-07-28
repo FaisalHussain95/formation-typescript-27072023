@@ -1,14 +1,13 @@
-import { Item } from "./Item";
+import Item from "./Item";
 import Life from "./Life";
-import { GenericId } from "./GenericId";
 
 /**
  * BreakableItem class
  * @name BreakableItem
  */
-export class BreakableItem extends Item {
+class BreakableItem extends Item {
   constructor(
-    id: GenericId,
+    id: number,
     name: string,
     description: string,
     wearable: boolean,
@@ -19,3 +18,5 @@ export class BreakableItem extends Item {
     super(id, name, description, wearable, weight, value);
   }
 }
+
+export default BreakableItem;

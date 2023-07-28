@@ -1,7 +1,7 @@
-import { Weapon } from "../models/Weapon";
+import Weapon from "../models/Weapon";
 import Life from "../models/Life";
 
-export class HandleDamage {
+class HandleDamage {
   static sustainAttack(life: Life, weapon: Weapon) {
     life.value -= weapon.damage;
 
@@ -11,3 +11,5 @@ export class HandleDamage {
     }
   }
 }
+
+export default HandleDamage;

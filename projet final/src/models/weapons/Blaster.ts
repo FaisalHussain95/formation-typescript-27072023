@@ -1,8 +1,7 @@
-import { Weapon } from "../Weapon";
-import { GenericId } from "../GenericId";
+import Weapon from "../Weapon";
 
 class Blaster extends Weapon {
-  constructor(id: GenericId) {
+  constructor(id: number) {
     super(id, "Blaster", "Blaster description", true, 1, 1, 10, 10);
   }
 }

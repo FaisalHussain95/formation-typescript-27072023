@@ -1,10 +1,17 @@
-import { Yolo } from './yolo';
+class Personne {
+  constructor(public nom: string, public prenom: string) {
+    console.log("Personne constructor");
+  }
+}
 
-let y = new Yolo();
-y.osef();
+const p = new Personne("toto", "titi");
+const p2: Personne = {
+  nom: "toto",
+  prenom: "titi",
+};
 
-// Test return type
-let t: string | number;
-t = y.returnMultipleImplicit(0);
+function aff(p: Personne) {}
+
+aff(p2);
 
 // y = 1; //  error TS2322: Type 'number' is not assignable to type 'Yolo'.

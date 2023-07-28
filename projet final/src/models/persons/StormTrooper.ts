@@ -1,12 +1,13 @@
-import { Person } from "../Person";
-import { GenericId } from "../GenericId";
+import Person from "../Person";
 import Life from "../Life";
 
 /**
  * Classe qui permet de créer un StormTrooper
  */
-export class StormTrooper extends Person {
-  constructor(id: GenericId, name: string) {
+class StormTrooper extends Person {
+  constructor(id: number, name: string) {
     super(id, name, new Life(30));
   }
 }
+
+export default StormTrooper;

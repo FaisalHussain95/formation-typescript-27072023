@@ -1,5 +1,5 @@
-import { Weapon } from "./Weapon";
-import { HandleDamage } from "../utils/HandleDamage";
+import Weapon from "./Weapon";
+import HandleDamage from "../utils/HandleDamage";
 
 /**
  * Life class

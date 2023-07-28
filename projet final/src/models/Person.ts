@@ -1,14 +1,14 @@
-import { GenericId } from "./GenericId";
-import { BreakableItem } from "./BreakableItem";
-import { Weapon } from "./Weapon";
+import GenericId from "./GenericId";
+import BreakableItem from "./BreakableItem";
+import Weapon from "./Weapon";
 import Life from "./Life";
 
 /**
  * Classe qui permet de créer un Personnage
  */
-export class Person {
+class Person implements GenericId {
   constructor(
-    public id: GenericId,
+    public id: number,
     public name: string,
     public life: Life,
     private _activeWeapon: Weapon | null = null
@@ -38,3 +38,5 @@ export class Person {
     console.log(`${target.name} health is now ${target.life.value}`);
   }
 }
+
+export default Person;
