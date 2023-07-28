@@ -1,17 +1,14 @@
+import IIdentity from "../types/IIdentity";
 import GenericId from "./GenericId";
 
 /**
  * Classe abstraite qui permet de créer un objet
  */
-abstract class Item implements GenericId {
-  constructor(
-    public id: number,
-    public name: string,
-    public description: string,
-    public wearable: boolean,
-    public weight: number,
-    public value: number
-  ) {}
+interface Item {
+  id: GenericId;
+  identity: IIdentity;
+  weight: number;
+  value: number;
 }
 
 export default Item;

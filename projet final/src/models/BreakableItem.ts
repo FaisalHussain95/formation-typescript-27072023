@@ -1,21 +1,25 @@
+import IIdentity from "../types/IIdentity";
+import GenericId from "./GenericId";
 import Item from "./Item";
 import Life from "./Life";
+import { v4 as uuidv4 } from "uuid";
 
 /**
  * BreakableItem class
  * @name BreakableItem
  */
-class BreakableItem extends Item {
+class BreakableItem implements Item {
+  public id: GenericId;
+
   constructor(
-    id: number,
-    name: string,
-    description: string,
-    wearable: boolean,
-    weight: number,
-    value: number,
+    public identity: IIdentity,
+    public weight: number,
+    public value: number,
     public life: Life
   ) {
-    super(id, name, description, wearable, weight, value);
+    this.id = {
+      id: uuidv4(),
+    };
   }
 }
 

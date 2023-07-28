@@ -5,8 +5,14 @@ import Life from "../Life";
  * Classe qui permet de créer un StormTrooper
  */
 class StormTrooper extends Person {
-  constructor(id: number, name: string) {
-    super(id, name, new Life(30));
+  constructor(name: string) {
+    super(
+      {
+        name,
+        info: "StormTrooper info...",
+      },
+      new Life(30)
+    );
   }
 }
 

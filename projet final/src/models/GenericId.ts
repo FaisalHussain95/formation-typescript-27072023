@@ -1,5 +1,5 @@
 interface GenericId {
-  id: number;
+  id: string;
 }
 
 export default GenericId;

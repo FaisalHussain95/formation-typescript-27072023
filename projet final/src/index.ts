@@ -20,24 +20,25 @@ Etape 04
 import Wookiee from "./models/persons/Wookiee";
 import StormTrooper from "./models/persons/StormTrooper";
 import Blaster from "./models/weapons/Blaster";
-import GenericId from "./models/GenericId";
 
-const blaster1 = new Blaster(10);
-const wookiee = new Wookiee(11, "Chewbacca");
-wookiee.equip(blaster1);
+// Create a wookiee and a stormtrooper
+const Chewbacca = new Wookiee("Chewbacca");
+const stormTrooper = new StormTrooper("StormTrooper");
 
-const stormTrooper = new StormTrooper(12, "StormTrooper");
+// Create a blaster and equip it to Chewbacca
+const blaster1 = new Blaster();
+Chewbacca.equip(blaster1);
 
 for (let i = 0; i < 10; i++) {
-  wookiee.attack(stormTrooper);
+  Chewbacca.attack(stormTrooper);
   console.log("--");
-  stormTrooper.attack(wookiee);
+  stormTrooper.attack(Chewbacca);
   console.log("--");
 
-  if (stormTrooper.life.value <= 0 || wookiee.life.value <= 0) {
+  if (stormTrooper.life.value <= 0 || Chewbacca.life.value <= 0) {
     break;
   }
 }
 
-console.log(stormTrooper.name, "is dead");
+console.log(stormTrooper.identity.name, "is dead");
 console.log("Fin du combat");

@@ -1,8 +1,22 @@
 import Weapon from "../Weapon";
 
 class Blaster extends Weapon {
-  constructor(id: number) {
-    super(id, "Blaster", "Blaster description", true, 1, 1, 10, 10);
+  constructor() {
+    const weight = 10;
+    const value = 10;
+    const damage = 10;
+    const range = 500;
+
+    super(
+      {
+        name: "Blaster",
+        info: "Blaster info...",
+      },
+      weight,
+      value,
+      damage,
+      range
+    );
   }
 }
 
